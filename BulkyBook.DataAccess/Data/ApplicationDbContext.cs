@@ -9,5 +9,6 @@ namespace BulkyBook.DataAccess
 
         public DbSet<Category> tbl_categories { get; set; }
         public DbSet<CoverType> tbl_coverType { get; set; }
+        public DbSet<Product> tbl_products { get; set; }
     }
 }
