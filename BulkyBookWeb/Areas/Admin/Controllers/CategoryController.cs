@@ -1,21 +1,21 @@
-﻿using BulkyBook.DataAccess;
+﻿using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 
-namespace BulkyBookWeb.Controllers
+namespace BulkyBookWeb.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
-        private readonly ApplicationDbContext _db;
-
-        public CategoryController(ApplicationDbContext db)
+        //private readonly ApplicationDbContext _db;
+        private readonly IUnitOfWork _unitOfWork;
+        public CategoryController(IUnitOfWork unitOfWork)
         {
-            _db = db;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
-            IEnumerable<Category> categories = _db.tbl_categories;
+            IEnumerable<Category> categories = _unitOfWork.Category.GetAll();
             return View(categories);
         }
 
@@ -25,19 +25,24 @@ namespace BulkyBookWeb.Controllers
             return View();
         }
 
+        public JsonResult getJson()
+        {
+            return Json(_unitOfWork.Category.GetAll());
+        }
+
         //POST
         [HttpPost]
         [AutoValidateAntiforgeryToken]
         public IActionResult Create(Category obj)
         {
-            if(obj.Name == obj.DisplayOrder.ToString())
+            if (obj.Name == obj.DisplayOrder.ToString())
             {
                 ModelState.AddModelError("name", "Name and Display Order cannot be same!");
             }
             if (ModelState.IsValid)
             {
-                _db.tbl_categories.Add(obj);
-                _db.SaveChanges();
+                _unitOfWork.Category.Add(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Category Created Successfully!";
                 return RedirectToAction("Index");
             }
@@ -47,18 +52,18 @@ namespace BulkyBookWeb.Controllers
         //GET
         public IActionResult Edit(int? id)
         {
-            if(id == null || id == 0)
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
-            var categoryFromDb = _db.tbl_categories.Find(id);
-            //var categoryFromFirst = _db.tbl_categories.FirstOrDefault(c => c.Id == id);
+            //var categoryFromDb = _db.tbl_categories.Find(id);
+            var categoryFromFirst = _unitOfWork.Category.GetFirstOrDefault(c => c.Id == id);
             //var categoryFromSingle = _db.tbl_categories.SingleOrDefault(c => c.Id == id);
-            if(categoryFromDb == null)
+            if (categoryFromFirst == null)
             {
                 return NotFound();
             }
-            return View(categoryFromDb);
+            return View(categoryFromFirst);
         }
 
         //POST
@@ -72,8 +77,8 @@ namespace BulkyBookWeb.Controllers
             }
             if (ModelState.IsValid)
             {
-                _db.tbl_categories.Update(obj);
-                _db.SaveChanges();
+                _unitOfWork.Category.Update(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Category Updated Successfully!";
                 return RedirectToAction("Index");
             }
@@ -87,31 +92,30 @@ namespace BulkyBookWeb.Controllers
             {
                 return NotFound();
             }
-            var categoryFromDb = _db.tbl_categories.Find(id);
-            //var categoryFromFirst = _db.tbl_categories.FirstOrDefault(c => c.Id == id);
+            //var categoryFromDb = _db.tbl_categories.Find(id);
+            var categoryFromFirst = _unitOfWork.Category.GetFirstOrDefault(c => c.Id == id);
             //var categoryFromSingle = _db.tbl_categories.SingleOrDefault(c => c.Id == id);
-            if (categoryFromDb == null)
+            if (categoryFromFirst == null)
             {
                 return NotFound();
             }
-            return View(categoryFromDb);
+            return View(categoryFromFirst);
         }
 
-        //POST
+        //POST (Used Action Name to show alternate method)
         [HttpPost, ActionName("Delete")]
         [AutoValidateAntiforgeryToken]
         public IActionResult DeletePOST(int? id)
         {
-            var obj = _db.tbl_categories.Find(id);
-            if(obj == null)
+            var obj = _unitOfWork.Category.GetFirstOrDefault(c => c.Id == id);
+            if (obj == null)
             {
                 return NotFound();
-            }    
-            _db.tbl_categories.Remove(obj);
-            _db.SaveChanges();
+            }
+            _unitOfWork.Category.Remove(obj);
+            _unitOfWork.Save();
             TempData["success"] = "Category Deleted Successfully!";
             return RedirectToAction("Index");
-            
         }
     }
 }

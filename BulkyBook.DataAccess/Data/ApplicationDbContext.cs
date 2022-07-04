@@ -8,5 +8,6 @@ namespace BulkyBook.DataAccess
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<Category> tbl_categories { get; set; }
+        public DbSet<CoverType> tbl_coverType { get; set; }
     }
 }

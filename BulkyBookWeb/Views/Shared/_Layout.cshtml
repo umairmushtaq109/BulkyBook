@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BulkyBookWeb.styles.css" asp-append-version="true" />
     @*Toastr Script*@
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     @*Bootstrap Icons*@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-
 </head>
 <body>
     <header>
@@ -27,10 +26,21 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
+
+                        </li>
+                        <li class="nav-item">
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Management</a>
+                            <div class="dropdown-menu">
+                                <a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                                <a class="nav-link" asp-area="Admin" asp-controller="CoverType" asp-action="Index">Cover Type</a>
+                                <div class="dropdown-divider"></div>
+                            </div>
                         </li>
                     </ul>
                 </div>
