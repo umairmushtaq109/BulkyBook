@@ -34,7 +34,6 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
                 company = _unitOfWork.Company.GetFirstOrDefault(u => u.Id == id);
                 return View(company);
             }
-
         }
 
         [HttpPost]

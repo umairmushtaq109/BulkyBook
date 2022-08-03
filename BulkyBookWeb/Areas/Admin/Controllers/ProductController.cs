@@ -78,7 +78,6 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
                 productVM.Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
                 return View(productVM);
             }
-            
         }
 
         [HttpPost]

@@ -30,7 +30,7 @@ function loadDataTable() {
                                     <a class="btn btn-danger" onClick=Delete('/Admin/Company/Delete/${data}')><i class="bi bi-trash-fill"></i> Delete</a>    
                                 </div>`;
                     },                    
-                    "width": "25%"
+                    "width": "30%"
                 }
             ]
         }

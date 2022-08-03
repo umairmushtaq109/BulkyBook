@@ -3,6 +3,8 @@ using BulkyBook.DataAccess.Repository;
 using BulkyBook.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using BulkyBook.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,12 +16,18 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
-builder.Services.AddDefaultIdentity<IdentityUser>()
+// Added Automatically by EntityFramework
+// builder.Services.AddDefaultIdentity<IdentityUser>() (This Line was: Before Role Management)
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-//Injecting our Repository Wrapper in Application
+// Adding Our Fake IEmailSender Service to bypass error
+builder.Services.AddSingleton<IEmailSender, EmailSender>();
+
+// Injecting our Repository Wrapper in Application
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+// For Razor Pages
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
@@ -37,9 +45,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// Authentication should always come before authorization
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Added because MVC does not work with Razor Pages
 app.MapRazorPages();
 
 app.MapControllerRoute(

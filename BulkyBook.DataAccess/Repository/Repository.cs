@@ -25,7 +25,7 @@ namespace BulkyBook.DataAccess.Repository
         {
             dbSet.Add(entity);
         }
-        //includeProperties Exact and Case Sensitive (Category, CoverType) Comma Separated 
+        //includeProperties Exact and Case Sensitive (Category,CoverType) Comma Separated without any whitespace
         public IEnumerable<T> GetAll(string? includeProperties = null)
         {
             IQueryable<T> query = dbSet.AsQueryable();
