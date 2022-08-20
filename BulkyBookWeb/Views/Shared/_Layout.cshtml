@@ -35,10 +35,14 @@
                                 <a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
                                 <a class="nav-link" asp-area="Admin" asp-controller="CoverType" asp-action="Index">Cover Type</a>
                                 <a class="nav-link" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
-                                <a class="nav-link" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>                                
-                                <a class="nav-link" asp-area="Admin" asp-controller="Dummy" asp-action="Index">Dummy</a>
                                 <div class="dropdown-divider"></div>
+                                <a class="nav-link" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>                                                                                                
                             </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index">
+                                <i class="bi bi-cart"></i>
+                            </a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
