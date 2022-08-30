@@ -277,3 +277,4 @@ D:\Practice\BulkyBook\BulkyBookWeb\obj\Debug\net6.0\BulkyBookWeb.genruntimeconfi
 D:\Practice\BulkyBook\BulkyBookWeb\obj\Debug\net6.0\ref\BulkyBookWeb.dll
 D:\Practice\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Utility.dll
 D:\Practice\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Utility.pdb
+D:\Practice\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Stripe.net.dll

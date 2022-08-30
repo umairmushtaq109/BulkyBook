@@ -12,7 +12,7 @@ namespace BulkyBook.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         [Required]
         public string Name { get; set; }
         public string? StreetAddress { get; set; }
