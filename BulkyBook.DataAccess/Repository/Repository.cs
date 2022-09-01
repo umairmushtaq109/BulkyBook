@@ -19,6 +19,7 @@ namespace BulkyBook.DataAccess.Repository
             _db = db;
             //Below can be done in Controller but we want to stay on Repository Pattern
             //_db.tbl_products.Include(u => u.Category).Include(u => u.CoverType);
+            //_db.tbl_orderHeader.AsNoTracking(); 
             this.dbSet = _db.Set<T>();
         }
 
@@ -43,9 +44,17 @@ namespace BulkyBook.DataAccess.Repository
             return query.ToList();
         }
 
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null)
+        public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null, bool tracked = true)
         {
-            IQueryable<T> query = dbSet.AsQueryable();
+            IQueryable<T> query;
+            if (tracked)
+            {
+                query = dbSet.AsQueryable();
+            } 
+            else
+            {
+                query = dbSet.AsQueryable().AsNoTracking();
+            }
             query = query.Where(filter);
             if (includeProperties != null)
             {
