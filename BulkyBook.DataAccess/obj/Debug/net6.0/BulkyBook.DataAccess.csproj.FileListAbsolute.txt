@@ -15,3 +15,5 @@ D:\Practice\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\refint\BulkyBook.Dat
 D:\Practice\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.pdb
 D:\Practice\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.genruntimeconfig.cache
 D:\Practice\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\ref\BulkyBook.DataAccess.dll
+D:\Practice\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Utility.dll
+D:\Practice\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Utility.pdb

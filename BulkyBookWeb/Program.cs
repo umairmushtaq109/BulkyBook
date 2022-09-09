@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using BulkyBook.Utility;
 using Stripe;
+using BulkyBook.DataAccess.DbInitializer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +28,9 @@ builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
 // Injecting our Repository Wrapper in Application
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// Injecting our DbInitializer in Application
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 
 // For Razor Pages
 builder.Services.AddRazorPages();
@@ -76,6 +80,9 @@ app.UseRouting();
 //Adding Stripe Configuration at Global Level Pipeline (Stripe.NET Nugget Package)
 StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<String>();
 
+//Calling SeedDatabase to Initialize Database
+SeedDatabase();
+
 // Authentication should always come before authorization
 app.UseAuthentication();
 app.UseAuthorization();
@@ -90,3 +97,13 @@ app.MapControllerRoute(
     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
+void SeedDatabase()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+        dbInitializer.Initialize();
+    }
+}
