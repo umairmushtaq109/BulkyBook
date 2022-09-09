@@ -22,7 +22,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-// Adding Our Fake IEmailSender Service to bypass error
+// Adding Our IEmailSender Service
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
 // Injecting our Repository Wrapper in Application
@@ -41,6 +41,22 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 //Stripe Payment Configuration
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
+//Adding For Sessions
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(100);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+//Adding Facebook Authentication Service
+builder.Services.AddAuthentication().AddFacebook(options =>
+{
+    options.AppId = "602799428218891";
+    options.AppSecret = "7e2858919c5007abdb6e4832be3f22ee";
+});
 
 var app = builder.Build();
 
@@ -63,6 +79,8 @@ StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey"
 // Authentication should always come before authorization
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession();
 
 // Added because MVC does not work with Razor Pages
 app.MapRazorPages();
