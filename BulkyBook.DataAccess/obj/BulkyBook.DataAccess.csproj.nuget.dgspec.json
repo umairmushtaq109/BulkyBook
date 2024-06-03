@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Practice\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {}
+    "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\Practice\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
+    "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Practice\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+        "projectUniqueName": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
         "projectName": "BulkyBook.DataAccess",
-        "projectPath": "D:\\Practice\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Umair Mushtaq\\.nuget\\packages\\",
-        "outputPath": "D:\\Practice\\BulkyBook\\BulkyBook.DataAccess\\obj\\",
+        "projectPath": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\VEER-PSE\\.nuget\\packages\\",
+        "outputPath": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Umair Mushtaq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VEER-PSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Practice\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {
-                "projectPath": "D:\\Practice\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj"
+              "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+                "projectPath": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj"
               },
-              "D:\\Practice\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
-                "projectPath": "D:\\Practice\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
+              "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+                "projectPath": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
               }
             }
           }
@@ -82,7 +82,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -91,21 +92,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Practice\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+    "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Practice\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectUniqueName": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "projectName": "BulkyBook.Models",
-        "projectPath": "D:\\Practice\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj",
-        "packagesPath": "C:\\Users\\Umair Mushtaq\\.nuget\\packages\\",
-        "outputPath": "D:\\Practice\\BulkyBook\\BulkyBook.Models\\obj\\",
+        "projectPath": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "packagesPath": "C:\\Users\\VEER-PSE\\.nuget\\packages\\",
+        "outputPath": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Umair Mushtaq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VEER-PSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,7 +147,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -155,21 +157,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Practice\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+    "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Practice\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectUniqueName": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
         "projectName": "BulkyBook.Utility",
-        "projectPath": "D:\\Practice\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
-        "packagesPath": "C:\\Users\\Umair Mushtaq\\.nuget\\packages\\",
-        "outputPath": "D:\\Practice\\BulkyBook\\BulkyBook.Utility\\obj\\",
+        "projectPath": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "packagesPath": "C:\\Users\\VEER-PSE\\.nuget\\packages\\",
+        "outputPath": "D:\\Umair Mushtaq\\Projects\\BulkyBook\\BulkyBook.Utility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Umair Mushtaq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VEER-PSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -214,7 +216,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -223,7 +226,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

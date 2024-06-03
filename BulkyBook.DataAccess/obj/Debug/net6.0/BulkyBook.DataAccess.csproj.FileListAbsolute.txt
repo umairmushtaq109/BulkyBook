@@ -17,3 +17,23 @@ D:\Practice\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess
 D:\Practice\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\ref\BulkyBook.DataAccess.dll
 D:\Practice\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Utility.dll
 D:\Practice\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Utility.pdb
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.DataAccess.deps.json
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.DataAccess.runtimeconfig.json
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.DataAccess.dll
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.DataAccess.pdb
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Models.dll
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Utility.dll
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Models.pdb
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Utility.pdb
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.csproj.AssemblyReference.cache
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.AssemblyInfoInputs.cache
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.AssemblyInfo.cs
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.csproj.CoreCompileInputs.cache
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.csproj.CopyComplete
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.dll
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\refint\BulkyBook.DataAccess.dll
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.pdb
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.genruntimeconfig.cache
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\ref\BulkyBook.DataAccess.dll
+D:\Umair Mushtaq\Projects\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.sourcelink.json
